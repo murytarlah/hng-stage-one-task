@@ -5,7 +5,7 @@ const app = express();
 // Load environment variables from the .env file
 dotenv.config();
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000;
 
 
 
@@ -26,7 +26,7 @@ app.get('/api', (req, res) => {
         current_day: currentDay,
         utc_time: utcTime,
         track: track,
-        github_file_url: 'https://github.com/murytarlah/hng-stage-one-task/master/app.js',
+        github_file_url: 'https://github.com/murytarlah/hng-stage-one-task/blob/main/app.js',
         github_repo_url: 'https://github.com/murytarlah/hng-stage-one-task',
         status_code: 200,
     };
